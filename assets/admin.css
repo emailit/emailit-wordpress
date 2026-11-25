@@ -1,0 +1,281 @@
+.emailit-title {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.emailit-mark {
+	width: 32px;
+	height: 25px;
+}
+
+.emailit-count {
+	display: inline-block;
+	min-width: 18px;
+	padding: 0 6px;
+	border-radius: 9px;
+	background: #d63638;
+	color: #fff;
+	font-size: 11px;
+	line-height: 18px;
+	text-align: center;
+}
+
+.emailit-layout {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) 320px;
+	gap: 20px;
+	margin-top: 16px;
+}
+
+@media (max-width: 1100px) {
+	.emailit-layout {
+		grid-template-columns: minmax(0, 1fr);
+	}
+}
+
+.emailit-card {
+	margin: 0 0 20px;
+	padding: 4px 20px 12px;
+	border: 1px solid #dcdcde;
+	border-radius: 8px;
+	background: #fff;
+}
+
+.emailit-card h2 {
+	margin-top: 16px;
+}
+
+.emailit-status {
+	padding-top: 12px;
+}
+
+.emailit-state {
+	display: flex;
+	align-items: center;
+	gap: 6px;
+	margin: 4px 0 8px;
+	font-size: 15px;
+	font-weight: 600;
+}
+
+.emailit-state.is-on .dashicons {
+	color: #00a32a;
+}
+
+.emailit-state.is-paused .dashicons {
+	color: #dba617;
+}
+
+.emailit-state.is-off .dashicons {
+	color: #d63638;
+}
+
+.emailit-facts {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+	gap: 12px;
+	margin: 12px 0 4px;
+}
+
+.emailit-facts dt {
+	color: #646970;
+	font-size: 12px;
+}
+
+.emailit-facts dd {
+	margin: 2px 0 0;
+}
+
+.emailit-block {
+	display: block;
+	margin: 6px 0;
+}
+
+.emailit-inline {
+	margin-left: 8px;
+}
+
+.emailit-error {
+	color: #b32d2e;
+}
+
+.emailit-log {
+	max-height: 320px;
+	overflow: auto;
+	padding: 8px;
+	background: #f6f7f7;
+	white-space: pre-wrap;
+}
+
+.emailit-bulk {
+	clear: both;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	margin: 8px 0 12px;
+	padding-top: 8px;
+}
+
+.emailit-table td {
+	vertical-align: top;
+}
+
+.emailit-to,
+.emailit-details {
+	word-break: break-word;
+}
+
+.emailit-details code {
+	display: inline-block;
+	margin-bottom: 4px;
+}
+
+.emailit-actions form {
+	display: flex;
+	gap: 10px;
+}
+
+.emailit-badge {
+	display: inline-block;
+	padding: 1px 8px;
+	border-radius: 10px;
+	font-size: 12px;
+	font-weight: 600;
+	line-height: 18px;
+}
+
+.emailit-badge.is-sent {
+	background: #e5f7ef;
+	color: #007b5e;
+}
+
+.emailit-badge.is-queued,
+.emailit-badge.is-sending {
+	background: #fcf5e1;
+	color: #8a6100;
+}
+
+.emailit-badge.is-failed {
+	background: #fcebec;
+	color: #b32d2e;
+}
+
+.emailit-title .emailit-mark {
+	flex: none;
+}
+
+.emailit-refresh {
+	margin: 8px 0 0;
+}
+
+.emailit-list {
+	margin: 0 0 8px 18px;
+	list-style: disc;
+}
+
+.emailit-pre {
+	max-height: 480px;
+	overflow: auto;
+	padding: 12px;
+	background: #f6f7f7;
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.emailit-preview {
+	width: 100%;
+	height: 520px;
+	border: 1px solid #dcdcde;
+	border-radius: 4px;
+	background: #fff;
+}
+
+.emailit-filters {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	clear: both;
+	margin: 8px 0;
+	padding-top: 8px;
+}
+
+.emailit-nowrap {
+	white-space: nowrap;
+}
+
+.emailit-break {
+	word-break: break-word;
+}
+
+.emailit-detail th {
+	width: 180px;
+	padding: 8px 10px 8px 0;
+}
+
+.emailit-detail td {
+	padding: 8px 10px;
+}
+
+.emailit-timeline {
+	margin: 0;
+}
+
+.emailit-timeline li {
+	padding: 6px 0;
+	border-bottom: 1px solid #f0f0f1;
+}
+
+.emailit-row {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 8px;
+}
+
+.emailit-forms {
+	margin-bottom: 12px;
+}
+
+.emailit-forms td {
+	vertical-align: middle;
+}
+
+.emailit-forms select,
+.emailit-forms input[type="text"] {
+	max-width: 220px;
+}
+
+.emailit-roles {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 6px 16px;
+	margin: 8px 0;
+}
+
+.emailit-badge.is-delivered,
+.emailit-badge.is-opened,
+.emailit-badge.is-clicked {
+	background: #d7f5e7;
+	color: #00664e;
+}
+
+.emailit-badge.is-held {
+	background: #fcf5e1;
+	color: #8a6100;
+}
+
+.emailit-badge.is-bounced,
+.emailit-badge.is-rejected,
+.emailit-badge.is-complained {
+	background: #fcebec;
+	color: #b32d2e;
+}
+
+.form-table td fieldset label.emailit-block {
+	display: block;
+}
+
+.emailit-side input.regular-text {
+	width: 100%;
+}

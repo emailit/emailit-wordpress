@@ -1,0 +1,1331 @@
+# Copyright (C) 2026 Emailit
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Emailit 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/emailit\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-11-25T11:34:10+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: emailit\n"
+
+#. Plugin Name of the plugin
+#. Author of the plugin
+#: emailit.php
+#: includes/admin/class-admin.php:76
+#: includes/admin/class-settings-page.php:57
+msgid "Emailit"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: emailit.php
+msgid "https://emailit.com/docs/frameworks/wordpress/"
+msgstr ""
+
+#. Description of the plugin
+#: emailit.php
+msgid "Sends WordPress email through the Emailit API with throttling, retries and an email log, and connects WooCommerce and form plugins to your Emailit contacts, audiences and automations."
+msgstr ""
+
+#. Author URI of the plugin
+#: emailit.php
+msgid "https://emailit.com"
+msgstr ""
+
+#: includes/admin/class-admin.php:77
+msgid "Emailit settings"
+msgstr ""
+
+#: includes/admin/class-admin.php:77
+#: includes/admin/class-admin.php:135
+#: includes/admin/class-integrations-page.php:42
+msgid "Settings"
+msgstr ""
+
+#: includes/admin/class-admin.php:78
+#: includes/admin/class-log-page.php:93
+#: includes/admin/class-log-page.php:236
+#: includes/admin/class-settings-page.php:182
+msgid "Email log"
+msgstr ""
+
+#: includes/admin/class-admin.php:79
+#: includes/admin/class-integrations-page.php:40
+msgid "Integrations"
+msgstr ""
+
+#: includes/admin/class-admin.php:156
+msgid "Emailit isn't sending your email yet."
+msgstr ""
+
+#: includes/admin/class-admin.php:156
+msgid "Add your API key"
+msgstr ""
+
+#. translators: %s: plugin names.
+#: includes/admin/class-admin.php:164
+#, php-format
+msgid "%s also changes how WordPress sends email. Deactivate it so all email goes through Emailit."
+msgstr ""
+
+#. translators: 1: number of emails, 2: time until the limit resets.
+#: includes/admin/class-admin.php:174
+#, php-format
+msgid "Your workspace reached its daily sending limit. %1$s queued emails will be sent in about %2$s, after the limit resets at 00:00 UTC."
+msgstr ""
+
+#: includes/admin/class-admin.php:180
+msgid "Emailit rejected the API key, so emails are being queued."
+msgstr ""
+
+#: includes/admin/class-admin.php:180
+msgid "Check the key"
+msgstr ""
+
+#: includes/admin/class-admin.php:182
+msgid "Your Emailit workspace is out of credits, so emails are being queued."
+msgstr ""
+
+#: includes/admin/class-admin.php:182
+msgid "Add credits or upgrade"
+msgstr ""
+
+#. translators: 1: number of emails, 2: link.
+#: includes/admin/class-admin.php:191
+#, php-format
+msgid "%1$s email could not be delivered. %2$s"
+msgid_plural "%1$s emails could not be delivered. %2$s"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/admin/class-admin.php:193
+msgid "See why"
+msgstr ""
+
+#: includes/admin/class-admin.php:213
+msgid "Emailit:"
+msgstr ""
+
+#: includes/admin/class-admin.php:252
+msgid "Details"
+msgstr ""
+
+#: includes/admin/class-admin.php:264
+msgid "You are not allowed to do this."
+msgstr ""
+
+#: includes/admin/class-admin.php:290
+msgid "Enter a valid email address."
+msgstr ""
+
+#: includes/admin/class-admin.php:294
+msgid "Save your API key first."
+msgstr ""
+
+#. translators: %s: site name.
+#: includes/admin/class-admin.php:308
+#, php-format
+msgid "Emailit test from %s"
+msgstr ""
+
+#: includes/admin/class-admin.php:309
+msgid "This test email was sent by the Emailit plugin. WordPress can now send email through Emailit."
+msgstr ""
+
+#. translators: %s: recipient.
+#: includes/admin/class-admin.php:320
+#, php-format
+msgid "Test email sent to %s."
+msgstr ""
+
+#. translators: 1: recipient, 2: Emailit email ID.
+#: includes/admin/class-admin.php:323
+#, php-format
+msgid "Test email sent to %1$s. Emailit ID: %2$s"
+msgstr ""
+
+#. translators: %s: error.
+#: includes/admin/class-admin.php:326
+#, php-format
+msgid "The test email was queued and will be retried: %s"
+msgstr ""
+
+#: includes/admin/class-admin.php:328
+msgid "The test email wasn't sent:"
+msgstr ""
+
+#: includes/admin/class-admin.php:341
+msgid "Check that the API key is complete and still exists in Emailit."
+msgstr ""
+
+#: includes/admin/class-admin.php:344
+msgid "This API key can't send email. Use a Sending Only or Full Access key."
+msgstr ""
+
+#: includes/admin/class-admin.php:347
+msgid "Set a From email on a domain you verified in Emailit."
+msgstr ""
+
+#: includes/admin/class-admin.php:350
+msgid "Your workspace doesn't have production access yet, so you can only send to workspace members."
+msgstr ""
+
+#: includes/admin/class-admin.php:353
+msgid "Add credits or upgrade your Emailit plan."
+msgstr ""
+
+#. translators: %s: number of emails.
+#: includes/admin/class-admin.php:375
+#, php-format
+msgid "Queue processed. %s emails are still waiting."
+msgstr ""
+
+#. translators: %s: number of emails.
+#: includes/admin/class-admin.php:381
+#: includes/admin/class-admin.php:387
+#, php-format
+msgid "%s email sent again."
+msgid_plural "%s emails sent again."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %s: number of emails.
+#: includes/admin/class-admin.php:392
+#, php-format
+msgid "%s email deleted."
+msgid_plural "%s emails deleted."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/admin/class-admin.php:396
+msgid "Failed emails deleted."
+msgstr ""
+
+#: includes/admin/class-admin.php:418
+msgid "Email deleted."
+msgstr ""
+
+#: includes/admin/class-admin.php:424
+msgid "You are not allowed to send this email again."
+msgstr ""
+
+#: includes/admin/class-admin.php:427
+msgid "This email's content wasn't saved, so it can't be sent again."
+msgstr ""
+
+#: includes/admin/class-admin.php:448
+msgid "The email was sent again, without its attachments, which aren't kept in the log."
+msgstr ""
+
+#: includes/admin/class-admin.php:448
+msgid "The email was sent again."
+msgstr ""
+
+#: includes/admin/class-admin.php:450
+msgid "The email wasn't sent:"
+msgstr ""
+
+#: includes/admin/class-admin.php:469
+msgid "Checked your Emailit account again."
+msgstr ""
+
+#: includes/admin/class-admin.php:537
+msgid "Integrations saved."
+msgstr ""
+
+#: includes/admin/class-admin.php:555
+msgid "Delivery tracking is on. The email log now shows delivered, bounced, opened and clicked."
+msgstr ""
+
+#: includes/admin/class-admin.php:560
+msgid "Paste the webhook's signing secret. It starts with whsec_."
+msgstr ""
+
+#: includes/admin/class-admin.php:563
+msgid "Signing secret saved."
+msgstr ""
+
+#: includes/admin/class-admin.php:567
+msgid "Delivery tracking is off."
+msgstr ""
+
+#: includes/admin/class-admin.php:585
+msgid "Your products are being sent to Emailit in the background."
+msgstr ""
+
+#: includes/admin/class-admin.php:590
+msgid "Your order history is being imported in the background."
+msgstr ""
+
+#. translators: %s: number of users.
+#: includes/admin/class-admin.php:601
+#, php-format
+msgid "%s users are being added to Emailit in the background."
+msgstr ""
+
+#: includes/admin/class-admin.php:611
+msgid "Tracking key created."
+msgstr ""
+
+#: includes/admin/class-admin.php:616
+msgid "Failed sync jobs cleared."
+msgstr ""
+
+#: includes/admin/class-integrations-page.php:42
+msgid "Add your API key on the Settings screen first."
+msgstr ""
+
+#: includes/admin/class-integrations-page.php:44
+msgid "Your API key is Sending Only. Contacts, audiences, WooCommerce sync and automatic delivery tracking need a Full Access key. Emails send either way."
+msgstr ""
+
+#: includes/admin/class-integrations-page.php:58
+msgid "Save integrations"
+msgstr ""
+
+#: includes/admin/class-integrations-page.php:102
+#: includes/admin/class-settings-page.php:326
+msgid "Delivery tracking"
+msgstr ""
+
+#: includes/admin/class-integrations-page.php:103
+msgid "Emailit tells this site when an email is delivered, bounces, is marked as spam, opened or clicked, and the email log shows it. Developers can react to every event with the emailit_webhook_event action."
+msgstr ""
+
+#: includes/admin/class-integrations-page.php:105
+#: includes/admin/class-settings-page.php:327
+msgid "On"
+msgstr ""
+
+#. translators: %s: time since the last event.
+#: includes/admin/class-integrations-page.php:110
+#, php-format
+msgid "Last event %s ago"
+msgstr ""
+
+#: includes/admin/class-integrations-page.php:119
+msgid "Turn off"
+msgstr ""
+
+#: includes/admin/class-integrations-page.php:127
+#: includes/admin/class-settings-page.php:215
+msgid "Turn on delivery tracking"
+msgstr ""
+
+#: includes/admin/class-integrations-page.php:129
+msgid "Creates a webhook in your Emailit workspace that only receives this site's emails."
+msgstr ""
+
+#: includes/admin/class-integrations-page.php:132
+msgid "Set up the webhook yourself"
+msgstr ""
+
+#: includes/admin/class-integrations-page.php:134
+msgid "In Emailit, go to Email API > Webhooks and add a webhook with this URL:"
+msgstr ""
+
+#: includes/admin/class-integrations-page.php:136
+msgid "Choose these events:"
+msgstr ""
+
+#. translators: %s: site ID.
+#: includes/admin/class-integrations-page.php:139
+#, php-format
+msgid "To receive only this site's emails, add the filter meta.wp_site equals %s."
+msgstr ""
+
+#: includes/admin/class-integrations-page.php:142
+msgid "Paste its signing secret here:"
+msgstr ""
+
+#: includes/admin/class-integrations-page.php:149
+msgid "Save secret"
+msgstr ""
+
+#: includes/admin/class-integrations-page.php:172
+msgid "WooCommerce"
+msgstr ""
+
+#: includes/admin/class-integrations-page.php:173
+msgid "Every WooCommerce email is tagged with its type and order (metadata wc_email and wc_order_id), so you can find them in Emailit. Connect the shop to also use orders, products and carts in Emailit campaigns and automations."
+msgstr ""
+
+#: includes/admin/class-integrations-page.php:176
+msgid "Emailit Commerce (orders, products, carts and revenue) is included with the Pro and Business plans. Until then, buyers are saved as contacts tagged \"customer\", and orders are sent as c:order_placed and c:order_completed events you can use in automations."
+msgstr ""
+
+#: includes/admin/class-integrations-page.php:184
+msgid "Connect the shop"
+msgstr ""
+
+#: includes/admin/class-integrations-page.php:186
+msgid "Send this shop's data to Emailit"
+msgstr ""
+
+#: includes/admin/class-integrations-page.php:187
+msgid "Orders, for purchase history and revenue per campaign and automation"
+msgstr ""
+
+#: includes/admin/class-integrations-page.php:188
+msgid "Products, for product blocks and recommendations in emails"
+msgstr ""
+
+#: includes/admin/class-integrations-page.php:189
+msgid "Carts of signed-in customers and of visitors who entered their email at checkout, for abandoned cart automations"
+msgstr ""
+
+#: includes/admin/class-integrations-page.php:190
+msgid "Abandoned cart emails link back to a page that refills the cart."
+msgstr ""
+
+#: includes/admin/class-integrations-page.php:194
+msgid "Newsletter checkbox"
+msgstr ""
+
+#: includes/admin/class-integrations-page.php:196
+msgid "Add a newsletter checkbox to the checkout (unticked by default)"
+msgstr ""
+
+#: includes/admin/class-integrations-page.php:197
+#: includes/integrations/class-woocommerce.php:64
+msgid "Send me news and offers by email"
+msgstr ""
+
+#: includes/admin/class-integrations-page.php:197
+msgid "Checkbox label"
+msgstr ""
+
+#: includes/admin/class-integrations-page.php:198
+msgid "— Choose the audience to subscribe them to —"
+msgstr ""
+
+#: includes/admin/class-integrations-page.php:199
+msgid "Buyers who tick it are subscribed to this audience. Works with the classic and the block checkout."
+msgstr ""
+
+#: includes/admin/class-integrations-page.php:203
+msgid "Tracking script"
+msgstr ""
+
+#: includes/admin/class-integrations-page.php:205
+msgid "Load the Emailit tracking script from js.emailit.com to record product views and recognize visitors who arrive from your emails"
+msgstr ""
+
+#: includes/admin/class-integrations-page.php:206
+msgid "Identify signed-in customers by their email address"
+msgstr ""
+
+#: includes/admin/class-integrations-page.php:208
+msgid "Tracking key"
+msgstr ""
+
+#: includes/admin/class-integrations-page.php:209
+msgid "Create a tracking key"
+msgstr ""
+
+#: includes/admin/class-integrations-page.php:211
+msgid "Off by default. If you turn it on, mention Emailit in your privacy policy and cookie notice."
+msgstr ""
+
+#: includes/admin/class-integrations-page.php:215
+msgid "Existing data"
+msgstr ""
+
+#: includes/admin/class-integrations-page.php:218
+msgid "Send all products"
+msgstr ""
+
+#. translators: %s: number of products.
+#: includes/admin/class-integrations-page.php:223
+#, php-format
+msgid "%s products sent."
+msgstr ""
+
+#. translators: %s: number of products.
+#: includes/admin/class-integrations-page.php:223
+#, php-format
+msgid "%s products sent so far…"
+msgstr ""
+
+#: includes/admin/class-integrations-page.php:229
+msgid "Import order history"
+msgstr ""
+
+#. translators: %s: number of orders.
+#: includes/admin/class-integrations-page.php:234
+#, php-format
+msgid "%s orders imported."
+msgstr ""
+
+#. translators: %s: number of orders.
+#: includes/admin/class-integrations-page.php:234
+#, php-format
+msgid "%s orders imported so far…"
+msgstr ""
+
+#: includes/admin/class-integrations-page.php:239
+msgid "Imports the last two years. Imported orders fill purchase history and recommendations, but don't start automations or count as campaign revenue. Needs Emailit Commerce."
+msgstr ""
+
+#: includes/admin/class-integrations-page.php:282
+msgid "Forms"
+msgstr ""
+
+#: includes/admin/class-integrations-page.php:283
+msgid "Save people who fill in your forms as Emailit contacts, subscribe them to an audience, and start automations with the c:form_submitted event. Supports Contact Form 7, WPForms, Gravity Forms, Elementor Pro, Ninja Forms, Fluent Forms, Formidable Forms and Forminator."
+msgstr ""
+
+#: includes/admin/class-integrations-page.php:285
+msgid "None of the supported form plugins is active."
+msgstr ""
+
+#: includes/admin/class-integrations-page.php:295
+msgid "Elementor forms appear here after their first submission."
+msgstr ""
+
+#: includes/admin/class-integrations-page.php:296
+msgid "No forms yet."
+msgstr ""
+
+#: includes/admin/class-integrations-page.php:305
+msgid "Form"
+msgstr ""
+
+#: includes/admin/class-integrations-page.php:306
+#: includes/admin/class-integrations-page.php:321
+msgid "Connect"
+msgstr ""
+
+#: includes/admin/class-integrations-page.php:307
+msgid "Subscribe to audience"
+msgstr ""
+
+#: includes/admin/class-integrations-page.php:308
+#: includes/admin/class-integrations-page.php:408
+msgid "When"
+msgstr ""
+
+#: includes/admin/class-integrations-page.php:309
+#: includes/admin/class-integrations-page.php:329
+#: includes/admin/class-integrations-page.php:376
+msgid "Tags"
+msgstr ""
+
+#: includes/admin/class-integrations-page.php:310
+msgid "Event"
+msgstr ""
+
+#: includes/admin/class-integrations-page.php:322
+#: includes/admin/class-integrations-page.php:371
+msgid "— Contact only —"
+msgstr ""
+
+#: includes/admin/class-integrations-page.php:324
+msgid "When to subscribe"
+msgstr ""
+
+#: includes/admin/class-integrations-page.php:325
+msgid "If they tick a newsletter box"
+msgstr ""
+
+#: includes/admin/class-integrations-page.php:326
+msgid "Always (sign-up form)"
+msgstr ""
+
+#: includes/admin/class-integrations-page.php:330
+msgid "Send c:form_submitted"
+msgstr ""
+
+#: includes/admin/class-integrations-page.php:337
+msgid "The plugin finds the email address, first and last name, and newsletter or consent checkboxes by their field type and label."
+msgstr ""
+
+#: includes/admin/class-integrations-page.php:353
+msgid "WordPress users"
+msgstr ""
+
+#: includes/admin/class-integrations-page.php:356
+msgid "Sync users"
+msgstr ""
+
+#: includes/admin/class-integrations-page.php:358
+msgid "Add new users as Emailit contacts and keep their name and email up to date"
+msgstr ""
+
+#: includes/admin/class-integrations-page.php:360
+msgid "Roles"
+msgstr ""
+
+#: includes/admin/class-integrations-page.php:365
+msgid "Only these roles; none ticked means every role. Contacts are tagged with role-<name>."
+msgstr ""
+
+#: includes/admin/class-integrations-page.php:369
+msgid "Audience"
+msgstr ""
+
+#: includes/admin/class-integrations-page.php:372
+msgid "Subscribe new users to this audience. Only choose one if your sign-up form asks for consent."
+msgstr ""
+
+#: includes/admin/class-integrations-page.php:380
+msgid "Existing users"
+msgstr ""
+
+#: includes/admin/class-integrations-page.php:382
+msgid "Add existing users as contacts"
+msgstr ""
+
+#: includes/admin/class-integrations-page.php:383
+msgid "They're added as contacts, not subscribed to the audience."
+msgstr ""
+
+#: includes/admin/class-integrations-page.php:406
+msgid "Sync problems"
+msgstr ""
+
+#: includes/admin/class-integrations-page.php:408
+msgid "What"
+msgstr ""
+
+#: includes/admin/class-integrations-page.php:408
+msgid "Error"
+msgstr ""
+
+#: includes/admin/class-integrations-page.php:419
+msgid "Clear"
+msgstr ""
+
+#: includes/admin/class-log-page.php:29
+msgid "Queued"
+msgstr ""
+
+#: includes/admin/class-log-page.php:30
+msgid "Sending"
+msgstr ""
+
+#: includes/admin/class-log-page.php:31
+msgid "Sent"
+msgstr ""
+
+#: includes/admin/class-log-page.php:32
+msgid "Failed"
+msgstr ""
+
+#: includes/admin/class-log-page.php:33
+msgid "Held"
+msgstr ""
+
+#: includes/admin/class-log-page.php:34
+msgid "Delivered"
+msgstr ""
+
+#: includes/admin/class-log-page.php:35
+msgid "Opened"
+msgstr ""
+
+#: includes/admin/class-log-page.php:36
+msgid "Clicked"
+msgstr ""
+
+#: includes/admin/class-log-page.php:37
+msgid "Bounced"
+msgstr ""
+
+#: includes/admin/class-log-page.php:38
+msgid "Rejected"
+msgstr ""
+
+#: includes/admin/class-log-page.php:39
+msgid "Complained"
+msgstr ""
+
+#: includes/admin/class-log-page.php:97
+msgid "All"
+msgstr ""
+
+#: includes/admin/class-log-page.php:99
+msgid "Problems"
+msgstr ""
+
+#: includes/admin/class-log-page.php:121
+#: includes/admin/class-log-page.php:151
+#: includes/admin/class-log-page.php:256
+msgid "Sent by"
+msgstr ""
+
+#: includes/admin/class-log-page.php:122
+msgid "Sent by anything"
+msgstr ""
+
+#: includes/admin/class-log-page.php:127
+msgid "Recipient, subject or Emailit ID"
+msgstr ""
+
+#: includes/admin/class-log-page.php:128
+msgid "Filter"
+msgstr ""
+
+#: includes/admin/class-log-page.php:135
+msgid "Send selected again"
+msgstr ""
+
+#: includes/admin/class-log-page.php:136
+msgid "Delete selected"
+msgstr ""
+
+#: includes/admin/class-log-page.php:138
+msgid "Send queued emails now"
+msgstr ""
+
+#: includes/admin/class-log-page.php:141
+msgid "Retry all failed"
+msgstr ""
+
+#: includes/admin/class-log-page.php:147
+msgid "Select all"
+msgstr ""
+
+#: includes/admin/class-log-page.php:148
+#: includes/class-privacy.php:108
+msgid "Date"
+msgstr ""
+
+#: includes/admin/class-log-page.php:149
+#: includes/admin/class-log-page.php:251
+#: includes/class-privacy.php:112
+msgid "To"
+msgstr ""
+
+#: includes/admin/class-log-page.php:150
+#: includes/class-privacy.php:116
+msgid "Subject"
+msgstr ""
+
+#: includes/admin/class-log-page.php:152
+#: includes/admin/class-log-page.php:250
+#: includes/class-privacy.php:120
+msgid "Status"
+msgstr ""
+
+#: includes/admin/class-log-page.php:157
+msgid "No emails yet."
+msgstr ""
+
+#: includes/admin/class-log-page.php:157
+msgid "The log is off, so only queued and failed emails are listed."
+msgstr ""
+
+#: includes/admin/class-log-page.php:161
+msgid "Select"
+msgstr ""
+
+#: includes/admin/class-log-page.php:164
+#: includes/admin/class-log-page.php:248
+msgid "(no subject)"
+msgstr ""
+
+#. translators: %s: time until the next attempt.
+#: includes/admin/class-log-page.php:205
+#, php-format
+msgid "next try in %s"
+msgstr ""
+
+#: includes/admin/class-log-page.php:207
+msgid "sending shortly"
+msgstr ""
+
+#: includes/admin/class-log-page.php:235
+msgid "Email"
+msgstr ""
+
+#: includes/admin/class-log-page.php:238
+msgid "This email isn't in the log any more."
+msgstr ""
+
+#: includes/admin/class-log-page.php:252
+msgid "From"
+msgstr ""
+
+#: includes/admin/class-log-page.php:254
+msgid "Reply-To"
+msgstr ""
+
+#: includes/admin/class-log-page.php:257
+msgid "Created"
+msgstr ""
+
+#: includes/admin/class-log-page.php:259
+msgid "Accepted by Emailit"
+msgstr ""
+
+#: includes/admin/class-log-page.php:261
+msgid "Sent with"
+msgstr ""
+
+#: includes/admin/class-log-page.php:261
+#: includes/admin/class-settings-page.php:97
+msgid "SMTP relay"
+msgstr ""
+
+#: includes/admin/class-log-page.php:261
+msgid "API"
+msgstr ""
+
+#: includes/admin/class-log-page.php:263
+#: includes/class-privacy.php:124
+msgid "Emailit ID"
+msgstr ""
+
+#: includes/admin/class-log-page.php:265
+msgid "Attempts"
+msgstr ""
+
+#: includes/admin/class-log-page.php:267
+msgid "Last error"
+msgstr ""
+
+#: includes/admin/class-log-page.php:270
+msgid "Attachments"
+msgstr ""
+
+#: includes/admin/class-log-page.php:277
+msgid "Delivery events"
+msgstr ""
+
+#: includes/admin/class-log-page.php:291
+msgid "This email holds a login, reset or confirmation link, so its content isn't shown and it can't be sent to another address."
+msgstr ""
+
+#: includes/admin/class-log-page.php:292
+msgid "Only network administrators can read emails and send them again."
+msgstr ""
+
+#: includes/admin/class-log-page.php:298
+msgid "Content"
+msgstr ""
+
+#: includes/admin/class-log-page.php:301
+msgid "Email preview"
+msgstr ""
+
+#: includes/admin/class-log-page.php:307
+msgid "The content of sent emails isn't saved. Turn on \"Save their content\" in the settings to keep it."
+msgstr ""
+
+#: includes/admin/class-log-page.php:313
+#: includes/admin/class-log-page.php:320
+msgid "Send again"
+msgstr ""
+
+#: includes/admin/class-log-page.php:318
+msgid "To another address (optional)"
+msgstr ""
+
+#: includes/admin/class-log-page.php:328
+msgid "Delete from the log"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:63
+msgid "Connection"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:66
+#: includes/admin/class-settings-page.php:283
+msgid "API key"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:70
+msgid "Set with EMAILIT_API_KEY in wp-config.php."
+msgstr ""
+
+#: includes/admin/class-settings-page.php:74
+msgid "Remove"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:77
+msgid "The saved key can't be read because the site's security keys changed. Paste the key again."
+msgstr ""
+
+#. translators: 1: dashboard path, 2: constant example.
+#: includes/admin/class-settings-page.php:83
+#, php-format
+msgid "Create a key in Emailit under %1$s. A Full Access key enables contacts, audiences, WooCommerce sync and delivery tracking; a Sending Only key only sends email. To keep the key out of the database, add %2$s to wp-config.php instead."
+msgstr ""
+
+#: includes/admin/class-settings-page.php:84
+msgid "Email API > API Keys"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:93
+msgid "Send with"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:96
+msgid "Emailit API (recommended)"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:98
+msgid "SMTP port"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:106
+msgid "The API is faster, reports your limits so throttling is exact, and adds metadata so you can filter WordPress email in Emailit. Use SMTP only if your host blocks outgoing HTTPS requests."
+msgstr ""
+
+#: includes/admin/class-settings-page.php:112
+msgid "Sender"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:115
+msgid "From email"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:118
+msgid "An address on a domain you verified in Emailit."
+msgstr ""
+
+#: includes/admin/class-settings-page.php:122
+msgid "From name"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:125
+msgid "Use this name for every email, even when a plugin sets its own"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:129
+msgid "Other From addresses"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:132
+msgid "Replace addresses on domains that aren't verified in Emailit (recommended)"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:133
+msgid "Always send from my From email"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:134
+msgid "Keep what plugins set (only replace the WordPress default)"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:135
+msgid "When a plugin sends from another domain, for example a contact form using the visitor's address, the email goes out from your From email and replies still reach the original address."
+msgstr ""
+
+#: includes/admin/class-settings-page.php:141
+msgid "Delivery"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:144
+msgid "Sending speed"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:147
+msgid "Automatic: follow my workspace's limits (recommended)"
+msgstr ""
+
+#. translators: %s: number input.
+#: includes/admin/class-settings-page.php:152
+#, php-format
+msgid "At most %s emails per second"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:157
+msgid "Emailit reports your per-second and daily limits with every email. Bursts are paced to the per-second limit, a page load sends up to 10 emails right away and queues the rest, and emails that wouldn't fit in today's limit wait in the queue until 00:00 UTC."
+msgstr ""
+
+#: includes/admin/class-settings-page.php:162
+msgid "Retries"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:164
+msgid "Queue emails that fail for a temporary reason and retry them for up to 30 hours"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:165
+msgid "Covers timeouts, network errors, 429 and 5xx responses, a rejected key and running out of credits. Retries reuse the same idempotency key, so an email is never delivered twice."
+msgstr ""
+
+#: includes/admin/class-settings-page.php:169
+msgid "Open and click tracking"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:172
+msgid "Use the sending domain's settings"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:173
+msgid "Off for WordPress email"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:174
+msgid "Opens only"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:175
+msgid "Clicks only"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:176
+msgid "Opens and clicks"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:178
+msgid "API only. Click tracking rewrites links, including password reset links."
+msgstr ""
+
+#: includes/admin/class-settings-page.php:184
+msgid "Log sent emails"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:185
+msgid "Save their content, so you can read and resend them (attachments aren't kept)"
+msgstr ""
+
+#. translators: %s: number input.
+#: includes/admin/class-settings-page.php:190
+#, php-format
+msgid "Delete log entries after %s days"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:195
+msgid "Queued and failed emails are always kept until they're sent or you delete them."
+msgstr ""
+
+#: includes/admin/class-settings-page.php:204
+msgid "Send a test email"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:207
+msgid "Send to"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:209
+msgid "Until your workspace has production access, Emailit only delivers to the account emails of workspace members."
+msgstr ""
+
+#: includes/admin/class-settings-page.php:210
+msgid "Send test email"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:213
+msgid "Next steps"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:216
+msgid "Connect WooCommerce and your forms"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:217
+msgid "WordPress guide"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:218
+msgid "Sending limits"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:244
+msgid "Not sending yet"
+msgstr ""
+
+#. translators: 1: sign-up link, 2: docs link.
+#: includes/admin/class-settings-page.php:249
+#, php-format
+msgid "Paste an Emailit API key below. No account yet? %1$s, add and verify your domain, then %2$s."
+msgstr ""
+
+#: includes/admin/class-settings-page.php:250
+msgid "Create one for free"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:251
+msgid "create an API key"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:256
+msgid "Emailit rejected the API key"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:257
+msgid "Paste a current key below. Emails are kept in the queue until the key works."
+msgstr ""
+
+#. translators: %s: time until sending resumes.
+#: includes/admin/class-settings-page.php:262
+#, php-format
+msgid "Paused, resumes in %s"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:268
+msgid "Sending through the Emailit SMTP relay"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:268
+msgid "Sending through the Emailit API"
+msgstr ""
+
+#. translators: %s: plugin names.
+#: includes/admin/class-settings-page.php:276
+#, php-format
+msgid "%s is active too. Only one plugin can send WordPress email; deactivate the others."
+msgstr ""
+
+#: includes/admin/class-settings-page.php:286
+msgid "Full Access"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:286
+msgid "Sending Only"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:288
+msgid "Couldn't check"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:290
+msgid "Invalid"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:294
+msgid "Speed"
+msgstr ""
+
+#. translators: %s: emails per second.
+#: includes/admin/class-settings-page.php:297
+#, php-format
+msgid "%s emails per second"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:300
+msgid "Left today"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:304
+msgid "Shown after the next email"
+msgstr ""
+
+#. translators: 1: emails left, 2: daily limit.
+#: includes/admin/class-settings-page.php:307
+#, php-format
+msgid "%1$s of %2$s"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:313
+msgid "Queue"
+msgstr ""
+
+#. translators: %s: number of emails.
+#. translators: %s: number of jobs.
+#: includes/admin/class-settings-page.php:319
+#: includes/admin/class-settings-page.php:332
+#, php-format
+msgid "%s waiting"
+msgid_plural "%s waiting"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %s: number of emails.
+#: includes/admin/class-settings-page.php:322
+#, php-format
+msgid "%s failed"
+msgid_plural "%s failed"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/admin/class-settings-page.php:327
+msgid "Off"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:329
+msgid "Background jobs"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:340
+msgid "Check again"
+msgstr ""
+
+#: includes/admin/class-settings-page.php:343
+msgid "WP-Cron is disabled on this site. Make sure a system cron job runs wp-cron.php every minute, or queued emails wait until you send them from the Email log."
+msgstr ""
+
+#: includes/admin/class-settings-page.php:359
+msgid "Your workspace reached its daily sending limit. New emails are queued and sent after the limit resets at 00:00 UTC."
+msgstr ""
+
+#: includes/admin/class-settings-page.php:361
+msgid "Emailit rejected the API key. New emails are queued. Save a valid key to resume."
+msgstr ""
+
+#: includes/admin/class-settings-page.php:363
+msgid "Your workspace is out of credits. New emails are queued and sent once you add credits."
+msgstr ""
+
+#: includes/admin/class-settings-page.php:365
+msgid "WordPress couldn't reach Emailit. New emails are queued and sent when the connection works again."
+msgstr ""
+
+#: includes/admin/class-settings-page.php:367
+msgid "New emails are queued and sent automatically."
+msgstr ""
+
+#. translators: %s: file name.
+#: includes/class-api-transport.php:203
+#, php-format
+msgid "The attachment %s no longer exists."
+msgstr ""
+
+#. translators: %s: file name.
+#: includes/class-api-transport.php:208
+#, php-format
+msgid "The attachment %s could not be read."
+msgstr ""
+
+#. translators: %s: database error.
+#: includes/class-dispatcher.php:108
+#, php-format
+msgid "The email could not be saved to the queue: %s"
+msgstr ""
+
+#. translators: 1: number of recipients, 2: daily limit.
+#: includes/class-dispatcher.php:151
+#: includes/class-throttle.php:194
+#, php-format
+msgid "This email has %1$d recipients, more than your workspace's daily sending limit of %2$d."
+msgstr ""
+
+#: includes/class-dispatcher.php:278
+msgid "The queued email could not be read."
+msgstr ""
+
+#: includes/class-email-log.php:372
+msgid "The page load stopped while this email was being sent, so it may not have gone out."
+msgstr ""
+
+#: includes/class-mailer.php:54
+msgid "The email has no recipients."
+msgstr ""
+
+#: includes/class-plugin.php:53
+msgid "Every minute (Emailit queue)"
+msgstr ""
+
+#: includes/class-privacy.php:39
+msgid "This site sends its emails, such as order confirmations, password resets and replies to forms, through Emailit, an email delivery service. Emailit receives each email's recipients, sender, subject, content and attachments in order to deliver it, and records whether it was delivered, opened or clicked."
+msgstr ""
+
+#: includes/class-privacy.php:40
+msgid "If you fill in a form or place an order and the site connects them to Emailit, your email address, name and the details you entered may also be stored in Emailit as a contact, and you may be subscribed to a newsletter if you agreed to it."
+msgstr ""
+
+#. translators: %s: link to Emailit's privacy policy.
+#: includes/class-privacy.php:43
+#, php-format
+msgid "See Emailit's privacy policy: %s"
+msgstr ""
+
+#: includes/class-privacy.php:57
+#: includes/class-privacy.php:71
+#: includes/class-privacy.php:104
+msgid "Emails sent through Emailit"
+msgstr ""
+
+#: includes/class-privacy.php:159
+msgid "Emails still waiting in the queue were kept so they can be delivered."
+msgstr ""
+
+#: includes/class-source.php:119
+msgid "WordPress"
+msgstr ""
+
+#: includes/class-source.php:120
+msgid "WordPress: password reset"
+msgstr ""
+
+#: includes/class-source.php:121
+msgid "WordPress: new user"
+msgstr ""
+
+#: includes/class-source.php:122
+msgid "WordPress: password changed"
+msgstr ""
+
+#: includes/class-source.php:123
+msgid "WordPress: comment"
+msgstr ""
+
+#: includes/class-source.php:124
+msgid "WordPress: comment moderation"
+msgstr ""
+
+#: includes/class-source.php:125
+msgid "WordPress: privacy request"
+msgstr ""
+
+#: includes/class-source.php:126
+msgid "WordPress: personal data export"
+msgstr ""
+
+#: includes/class-source.php:127
+msgid "WordPress: recovery mode"
+msgstr ""
+
+#: includes/class-source.php:128
+msgid "WordPress: email change"
+msgstr ""
+
+#: includes/class-source.php:129
+msgid "WordPress: account change"
+msgstr ""
+
+#: includes/class-source.php:130
+msgid "WordPress: admin email change"
+msgstr ""
+
+#: includes/class-source.php:131
+msgid "WordPress: automatic updates"
+msgstr ""
+
+#: includes/class-source.php:132
+msgid "WordPress: core update"
+msgstr ""
+
+#: includes/class-source.php:133
+msgid "WordPress: sign-up"
+msgstr ""
+
+#. translators: %s: theme folder.
+#: includes/class-source.php:139
+#, php-format
+msgid "Theme: %s"
+msgstr ""
+
+#. translators: %s: must-use plugin file.
+#: includes/class-source.php:143
+#, php-format
+msgid "Must-use plugin: %s"
+msgstr ""
+
+#: includes/class-webhooks.php:116
+msgid "Emailit can only send webhooks to an https:// address. This site doesn't use HTTPS."
+msgstr ""
+
+#: includes/class-webhooks.php:121
+msgid "Emailit can't reach a local site. Set up delivery tracking on a site that's online."
+msgstr ""
+
+#. translators: %s: site address.
+#: includes/class-webhooks.php:130
+#: includes/integrations/class-woocommerce.php:972
+#, php-format
+msgid "WordPress: %s"
+msgstr ""
+
+#: includes/class-webhooks.php:147
+msgid "Your API key can't create webhooks. Use a Full Access key, or add the webhook in Emailit yourself and paste its signing secret."
+msgstr ""

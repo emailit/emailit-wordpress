@@ -1,0 +1,54 @@
+# Deploys a published GitHub release to the WordPress.org plugin directory and
+# attaches the plugin zip to the release.
+#
+# Needs two repository secrets, created once the plugin is approved on
+# WordPress.org: SVN_USERNAME and SVN_PASSWORD (the WordPress.org account's
+# SVN password from https://profiles.wordpress.org/me/profile/edit/group/3/?screen=svn-password).
+# Without them, the zip is still attached to the release and the deploy is skipped.
+name: Deploy to WordPress.org
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Read the slug and version
+        run: |
+          slug=$(grep -l '^ \* Plugin Name:' *.php | head -1 | sed 's/\.php$//')
+          version=$(sed -n 's/^ \* Version: *//p' "$slug.php" | head -1)
+          stable=$(sed -n 's/^Stable tag: *//p' readme.txt | head -1)
+          tag="${GITHUB_REF_NAME#v}"
+          if [ "$version" != "$tag" ] || [ "$stable" != "$tag" ]; then
+            echo "::error::Release $GITHUB_REF_NAME doesn't match the plugin version ($version) or the readme Stable tag ($stable)."
+            exit 1
+          fi
+          echo "SLUG=$slug" >> "$GITHUB_ENV"
+      - name: Check for WordPress.org credentials
+        id: svn
+        env:
+          SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
+        run: |
+          if [ -n "$SVN_USERNAME" ]; then echo "ready=true" >> "$GITHUB_OUTPUT"; else echo "ready=false" >> "$GITHUB_OUTPUT"; echo "::notice::SVN_USERNAME isn't set, so WordPress.org isn't updated. Only the zip is attached."; fi
+      - name: Deploy to WordPress.org
+        if: steps.svn.outputs.ready == 'true'
+        uses: 10up/action-wordpress-plugin-deploy@stable
+        env:
+          SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
+          SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
+          SLUG: ${{ env.SLUG }}
+      - name: Build the zip
+        run: |
+          mkdir -p "build/$SLUG"
+          rsync -a --exclude-from=.distignore ./ "build/$SLUG/"
+          (cd build && zip -qr "$SLUG.zip" "$SLUG")
+      - name: Attach the zip to the release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release upload "$GITHUB_REF_NAME" "build/$SLUG.zip" --clobber

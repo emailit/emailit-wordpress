@@ -1,0 +1,58 @@
+# Lints the plugin and runs the official WordPress Plugin Check on every push
+# and pull request.
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    name: PHP ${{ matrix.php }} lint
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        php: ['7.4', '8.1', '8.4']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          tools: none
+      - name: Syntax check
+        run: find . -name '*.php' -not -path './vendor/*' -print0 | xargs -0 -n1 php -l > /dev/null
+
+  phpcs:
+    name: WordPress coding standards
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          tools: composer
+      - name: Install WPCS
+        run: |
+          composer global config allow-plugins.dealerdirect/phpcodesniffer-composer-installer true
+          composer global require --no-interaction wp-coding-standards/wpcs:^3.1 phpcompatibility/phpcompatibility-wp:'*'
+      - name: Run PHPCS
+        run: "$(composer global config bin-dir --absolute --quiet)/phpcs"
+
+  plugin-check:
+    name: Plugin Check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build the plugin folder
+        run: |
+          slug=$(grep -l '^ \* Plugin Name:' *.php | head -1 | sed 's/\.php$//')
+          mkdir -p "build/$slug"
+          rsync -a --exclude-from=.distignore ./ "build/$slug/"
+          echo "SLUG=$slug" >> "$GITHUB_ENV"
+      - uses: wordpress/plugin-check-action@v1
+        with:
+          build-dir: build/${{ env.SLUG }}
